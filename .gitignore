@@ -4,3 +4,4 @@ file-b.txt/
 *.swf
 *.exe
 *.txt
+.vscode/
