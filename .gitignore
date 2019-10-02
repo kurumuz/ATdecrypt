@@ -1,0 +1,6 @@
+bin/
+obj/
+file-b.txt/
+*.swf
+*.exe
+*.txt
