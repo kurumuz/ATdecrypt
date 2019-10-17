@@ -42,7 +42,14 @@ namespace ATdecrypt
                     fkeyarray[2] = fkey[(choice-1)*3+2];
                 }
             }
+            else
+            {
+                fkeyarray[0] = fkey[0];
+                fkeyarray[1] = fkey[1];
+                fkeyarray[2] = fkey[2];
+            }
             Console.WriteLine("Decrypt ediliyor...");
+            Console.WriteLine(fkeyarray[0] + " " + fkeyarray[1] + " " + fkeyarray[2]);
             fbytes = fernusDecrypt(fbytes, fkeyarray);
             Console.WriteLine("Kaydetmek için dosya adı giriniz:");
             File.WriteAllBytes(Console.ReadLine() + ".swf", fbytes);
