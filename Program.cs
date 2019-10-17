@@ -9,7 +9,8 @@ namespace ATdecrypt
     {
         static void Main(string[] args)
         { 
-            byte[] fbytes = File.ReadAllBytes("file-b.txt");
+            string filebpath = Environment.GetEnvironmentVariable("LocalAppData") + "\\Temp\\file-b.txt"; 
+            byte[] fbytes = File.ReadAllBytes(filebpath);
             List<int> fkey = findkeys(fbytes);
             int[] fkeyarray = new int[3];
 
